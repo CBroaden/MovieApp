@@ -3,7 +3,7 @@
 export default function CreateAccount() {
 
     return(
-        <div className="h-screen bg-gradient-to-b from-slate-500 to-slate-800 pt-10">
+        <div className="h-screen pt-16 bg-gradient-to-b from-slate-500 to-slate-800">
             <div className="w-72 bg-slate-300 p-4 mx-auto rounded-xl border-black border-2">
                 
                 <h1 className="text-center text-2xl font-black">Create Account</h1>

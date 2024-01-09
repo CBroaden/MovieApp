@@ -22,25 +22,21 @@ export default function Movies() {
   return (
     <main className="flex flex-col min-h-screen bg-slate-400  items-center justify-between p-14">
     
-      <h1 className='mb-12 text-xl font-bold'>Movie Recommendation App</h1>
       
-      <ul>
-        {movieList.map((movie) => (
-          <li>{movie['title']}</li>
-        ))}
-      </ul>
 
       <div className='container rounded-3xl shadow-lg shadow-black pb-2 bg-gray-700 mx-auto'>
         <h1
-          className='mb-2 text-center font-semibold bg-slate-600 rounded-t-3xl shadow-sm shadow-black mx-auto'>
-          Trending</h1>
+          className='mb-4 text-2xl py-2 text-center font-semibold bg-slate-600 rounded-t-3xl shadow-sm shadow-black mx-auto'>
+          Discover</h1>
         <div className="flex flex-wrap justify-center ">
           {movieList.map((movie) => (
-            <img
-              className="h-[200px] w-[150px] m-1"
-              src={`https://image.tmdb.org/t/p/w500${movie['poster_path']}`}
-              alt={movie['title']}
-            />
+            <div className='m-2'>
+              <img
+                className="h-[150px] w-[100px] md:h-[200px] md:w-[150px]"
+                src={`https://image.tmdb.org/t/p/w500${movie['poster_path']}`}
+                alt={movie['title']}
+              />
+            </div>
           ))}
         </div>
       </div>

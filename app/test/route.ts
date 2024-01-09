@@ -17,5 +17,5 @@ export async function GET(request: Request) {
   }
  
   const users = await sql`SELECT username FROM users;`;
-  return NextResponse.json({ users }.users.rows.username, { status: 200 });
+  return NextResponse.json({ users }.users.rows, { status: 200 });
 }
