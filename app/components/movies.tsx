@@ -1,5 +1,6 @@
 "use client"
 import { useEffect, useState } from 'react'
+import Image from 'next/image';
 
 
 
@@ -30,9 +31,11 @@ export default function Movies() {
           Discover</h1>
         <div className="flex flex-wrap justify-center ">
           {movieList.map((movie) => (
-            <div className='m-2'>
-              <img
-                className="h-[150px] w-[100px] md:h-[200px] md:w-[150px]"
+            <div className='m-2' key={movie['id']}>
+              <Image
+                width={100}
+                height={150}
+                className=" md:h-[200px] md:w-[150px]"
                 src={`https://image.tmdb.org/t/p/w500${movie['poster_path']}`}
                 alt={movie['title']}
               />

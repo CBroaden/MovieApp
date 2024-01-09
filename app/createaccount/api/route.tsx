@@ -10,12 +10,12 @@ export async function GET(request: Request) {
   
   try {
     if (!username || !password) throw new Error('Username and Password required');
-    if (password != pconfirm) throw new Error('Password and Passord Confirmation Must Match')
+    if (password != pconfirm) throw new Error('Password and Password Confirmation Must Match')
     await sql`INSERT INTO users (username, password) VALUES (${username}, ${password});`;
   console.log('Success');
 } catch (error) {
     
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    return NextResponse.json({ error: Error }, { status: 500 });
   }
  
   const users = await sql`SELECT username FROM users;`;
