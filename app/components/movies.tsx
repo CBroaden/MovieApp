@@ -35,7 +35,7 @@ export default function Movies() {
               <Image
                 width={100}
                 height={150}
-                className=" md:h-[200px] md:w-[150px]"
+                className=""
                 src={`https://image.tmdb.org/t/p/w500${movie['poster_path']}`}
                 alt={movie['title']}
               />

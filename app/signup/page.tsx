@@ -1,6 +1,6 @@
 
 
-export default function CreateAccount() {
+export default function SignUp() {
 
     return(
         <div className="h-screen pt-16 bg-gradient-to-b from-slate-500 to-slate-800">

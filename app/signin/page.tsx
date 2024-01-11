@@ -1,6 +1,6 @@
 
 
-export default function Login() {
+export default function SignIn() {
 
     return(
         <div className="h-screen bg-gradient-to-b from-slate-500 to-slate-800 pt-16">
