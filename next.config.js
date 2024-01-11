@@ -8,10 +8,16 @@ module.exports = {
       remotePatterns: [
         {
           protocol: 'https',
-          hostname: 'image.tmdb.org',
+          hostname: 'image.tmdb.org' ,
           port: '',
           pathname: '/t/p/w500/**',
         },
+        {
+          protocol: 'https',
+          hostname: 'lh3.googleusercontent.com',
+          port: '',
+          pathname: '/a/**',
+        }
       ],
     },
   }
