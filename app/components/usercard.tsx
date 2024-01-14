@@ -1,4 +1,4 @@
-
+import { getSession } from "next-auth/react";
 import Image from "next/image"
 
 type User = {
@@ -12,28 +12,32 @@ type Props = {
     pagetype: string,
 }
 
+
+
 export default function UserCard({ user, pagetype }: Props) {
 
-    //console.log(user)
+    console.log(user)
+    
 
     const greeting = user?.name ? (
-        <div className="flex flex-col items-center p-6 bg-white rounded-lg font-bold text-5xl text-black">
+        <div className="flex flex-col items-center p-1  rounded-lg font-bold text-xl text-black">
             Hello {user?.name} !
         </div>
     ) : null
 
     const emailDisplay = user?.email ? (
-        <div className="flex flex-col items-center p-6 bg-white rounded-lg font-bold text-5xl text-black">
+        <div className="flex flex-col items-center p-1  rounded-lg font-bold text-xl text-black">
             {user?.email}
         </div>
     ) : null
 
+
     const userImage = user?.image ? (
         <Image
-            className="border-4 border-black dark:border-slate-500 drop-shadow-xl shadow-black rounded-full mx-auto mt-8"
+            className="border-4 border-black dark:border-slate-500 drop-shadow-xl shadow-black rounded-full mx-auto mt-2"
             src={user?.image}
-            width={200}
-            height={200}
+            width={100}
+            height={100}
             alt={user?.name ?? "Profile Pic"}
             priority={true}
         />
@@ -44,7 +48,7 @@ export default function UserCard({ user, pagetype }: Props) {
             {greeting}
             {emailDisplay}
             {userImage}
-            <p className="text-2xl text-white text-center">{pagetype} Page!</p>
+            <p className="text-2xl  text-center">{pagetype} Page!</p>
         </section>
     )
 }

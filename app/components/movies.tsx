@@ -31,7 +31,7 @@ export default function Movies() {
           Discover</h1>
         <div className="flex flex-wrap justify-center ">
           {movieList.map((movie) => (
-            <div className='m-2' key={movie['id']}>
+            <div className='m-2 h-auto w-auto' key={movie['id']}>
               <Image
                 width={100}
                 height={150}
