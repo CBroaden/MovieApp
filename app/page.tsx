@@ -7,7 +7,7 @@ import Movies from './components/movies';
 import UserCard from './components/usercard';
 import { getServerSession } from 'next-auth';
 import { options } from './api/auth/[...nextauth]/options';
-
+import PostForm from './components/postform';
 
 export default async function Home() {
   const session = await getServerSession(options)
@@ -17,12 +17,12 @@ export default async function Home() {
       {session ? (
         <UserCard user={session?.user} pagetype={"Home"} />
       ) : (
-        <h1 className="text-5xl text-center text-red-600 font-semibold">
+        <h1 className="text-xl text-center text-red-900 font-semibold">
         You are Not Authenticated !!!
       </h1>
       )}
       <h1 className='text-3xl text-center font-bold mt-12'>Movie Recommendation App</h1>
-
+      <PostForm/>
       <Movies />
     </main>
   );

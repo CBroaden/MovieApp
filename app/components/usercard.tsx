@@ -20,7 +20,7 @@ export default function UserCard({ user, pagetype }: Props) {
     
 
     const greeting = user?.name ? (
-        <div className="flex flex-col items-center p-1  rounded-lg font-bold text-xl text-black">
+        <div className="flex flex-col items-center p-1 rounded-lg font-bold text-xl text-black">
             Hello {user?.name} !
         </div>
     ) : null
