@@ -1,4 +1,3 @@
-import { getSession } from "next-auth/react";
 import Image from "next/image"
 
 type User = {
@@ -11,8 +10,6 @@ type Props = {
     user: User,
     pagetype: string,
 }
-
-
 
 export default function UserCard({ user, pagetype }: Props) {
 
@@ -30,7 +27,6 @@ export default function UserCard({ user, pagetype }: Props) {
             {user?.email}
         </div>
     ) : null
-
 
     const userImage = user?.image ? (
         <Image

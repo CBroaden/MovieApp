@@ -9,10 +9,11 @@ import { getServerSession } from 'next-auth';
 import { options } from './api/auth/[...nextauth]/options';
 import PostForm from './components/postform';
 
+
 export default async function Home() {
   const session = await getServerSession(options)
   return (
-    <main className="pt-16 flex flex-col min-h-screen bg-slate-400  items-center justify-between">
+    <main className="pt-16 flex flex-col min-h-screen  items-center justify-between">
       
       {session ? (
         <UserCard user={session?.user} pagetype={"Home"} />

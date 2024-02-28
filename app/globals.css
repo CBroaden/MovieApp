@@ -21,6 +21,14 @@
   @apply bg-white border-black border rounded-sm py-1 px-2 hover:bg-slate-400 active:bg-slate-600;
 }
 
+textarea, input {
+  @apply rounded;
+}
 
+.cgradient {
+  @apply bg-opacity-70 bg-indigo-700;
+}
 
-
+body {
+  @apply bg-gradient-to-br from-black via-indigo-500 to-black bg-fixed
+}

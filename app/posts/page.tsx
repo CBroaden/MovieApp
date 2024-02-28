@@ -1,31 +1,31 @@
-import { PrismaClient } from '@prisma/client'
-import { getServerSession } from 'next-auth'
-import { options } from '../api/auth/[...nextauth]/options'
+import { PrismaClient } from "@prisma/client";
+import { getServerSession } from "next-auth";
+import { options } from "../api/auth/[...nextauth]/options";
+import PostForm from "../components/postform";
+import AllPosts from "../components/allposts";
 
-const prisma = new PrismaClient()
+const prisma = new PrismaClient();
 
+export default function Posts() {
 
+  type User =
+    | {
+        name?: string | null | undefined;
+        email?: string | null | undefined;
+        image?: string | null | undefined;
+      }
+    | undefined;
 
-async function main() {
-  // ... you will write your Prisma Client queries here
-  const session = await getServerSession(options)
-  const username = session?.user?.name
-  await prisma.posts.create({
-    data: {
-      author: username!,
-      movie_title: '',
-      content: '',
-      likes: 0,
-    }
-  })
+  type Props = {
+    user: User;
+    pagetype: string;
+  };
+
+  return (
+    <div className="w-full max-w-2xl mx-auto pt-16 ">
+      <h1 className="text-4xl text-center ">Posts</h1>
+      <PostForm />
+      <AllPosts />
+    </div>
+  );
 }
-
-main()
-  .then(async () => {
-    await prisma.$disconnect()
-  })
-  .catch(async (e) => {
-    console.error(e)
-    await prisma.$disconnect()
-    process.exit(1)
-  })

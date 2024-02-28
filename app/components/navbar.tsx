@@ -14,9 +14,10 @@ export default async function Navbar() {
     
 
     return(
-        <nav className="flex items-center w-full bg-gray-700 h-[80px]">
+        <nav className="flex items-center w-full bg-gray-700 h-[80px] ">
         <ul className="flex justify-evenly items-center text-xl font-semibold text-white w-full">
                 <li><Link href="/">Home</Link></li>
+                <li><Link href="/posts">Posts</Link></li>
                 <li><Link href="/server">Server</Link></li>
                 <li><Link href="/client">Client</Link></li>
                 <li><Link href="/extra">Extra</Link></li>

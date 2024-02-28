@@ -21,10 +21,8 @@ export default function Movies() {
   
 
   return (
-    <main className="flex flex-col min-h-screen bg-slate-400  items-center justify-between p-14">
-    
+    <main className="flex max-w-4xl flex-col min-h-screen items-center justify-between p-14">
       
-
       <div className='container rounded-3xl shadow-lg shadow-black pb-2 bg-gray-700 mx-auto'>
         <h1
           className='mb-4 text-2xl py-2 text-center font-semibold bg-slate-600 rounded-t-3xl shadow-sm shadow-black mx-auto'>
