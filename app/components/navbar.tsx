@@ -14,26 +14,22 @@ export default async function Navbar() {
     
 
     return(
-        <nav className="flex items-center w-full bg-gray-700 h-[80px] ">
-        <ul className="flex justify-evenly items-center text-xl font-semibold text-white w-full">
-                <li><Link href="/">Home</Link></li>
-                <li><Link href="/posts">Posts</Link></li>
-                <li><Link href="/server">Server</Link></li>
-                <li><Link href="/client">Client</Link></li>
-                <li><Link href="/extra">Extra</Link></li>
-        
+        <nav className="flex items-center w-full bg-secondary h-[80px] ">
+        <ul className="flex justify-between max-w-4xl mx-auto items-center text-xl font-semibold text-white w-full">
+            <li><Link href="/">Home</Link></li>
+            <li><Link href="/posts">Posts</Link></li>
         {session ? (
           <>
             <li><Link href="/api/auth/signout">Sign Out</Link></li>
-            <li>
-              <Image alt="User Profile Image" className="rounded-full border border-black" src={session.user?.image!} width={30} height={30} />
+            <li className="">
+              <Image alt="User Profile Image" className="rounded-full border mx-auto border-black" src={session.user?.image!} width={30} height={30} />
+              <h2 className="text-sm">{session.user?.name}</h2>
             </li>
           </>
       ) : (
-        <li><Link href="/api/auth/signin">Sign In</Link></li>
-      
+            <li><Link href="/api/auth/signin">Sign In</Link></li>
       )}
-      </ul>
+        </ul>
       </nav>
     )
 }

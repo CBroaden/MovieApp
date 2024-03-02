@@ -1,9 +1,8 @@
 import { getServerSession } from "next-auth";
 import { options } from "../api/auth/[...nextauth]/options";
-import { PrismaClient } from "@prisma/client";
 import createPost from "../action";
+import Image from "next/image";
 
-const prisma = new PrismaClient();
 
 export default async function PostForm() {
   const session = await getServerSession(options);
@@ -12,10 +11,13 @@ export default async function PostForm() {
   
 
   return (
-    <div className="cgradient mx-auto w-3/4 md:w-1/2 max-w-md my-5 rounded p-4 border-2 border-black shadow-lg shadow-black">
-      <form action={createPost} method="get">
+    <div className="bg-secondary mx-auto w-3/4 md:w-1/2 max-w-md my-5 rounded p-4 border-2 border-black shadow-lg shadow-black">
+      <form action={createPost}>
         {session ? (
-          <h1 className="">{session.user?.name}</h1>
+          <>
+            <Image alt="User Profile Image" className="rounded-full border mx-auto border-black" src={session.user?.image!} width={30} height={30} />
+            <h1 className="text-center text-lg font-semibold">{session.user?.name}</h1>
+          </>
         ) : (
           <h1 className="text-center text-red-900 font-semibold">
             Must Be Signed In To Create Posts
@@ -42,7 +44,7 @@ export default async function PostForm() {
           id="post"
           name="post"
           value="Create Post"
-          className="rounded border border-black py-1 px-5 bg-white hover:bg-neutral-300 cursor-pointer flex mx-auto"
+          className="btn flex mx-auto"
         />
       </form>
     </div>
