@@ -9,8 +9,10 @@ const prisma = new PrismaClient();
 export default async function createPost(formData: FormData) {
   const session = await getServerSession(options);
 
+  const username = session?.user?.name;
+
   if (!session) {
-    redirect("/api/auth/signin?callbackUrl=/posts");
+    return redirect("/api/auth/signin?callbackUrl=/posts");
   } else {
     await prisma.posts
       .create({
