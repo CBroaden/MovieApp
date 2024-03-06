@@ -16,11 +16,11 @@ export default async function PostForm() {
         {session ? (
           <>
             <Image alt="User Profile Image" className="rounded-full border mx-auto border-black" src={session.user?.image!} width={30} height={30} />
-            <h1 className="text-center text-lg font-semibold">{session.user?.name}</h1>
+            <h1 className="text-center text-lg font-semibold">@{session.user?.name}</h1>
           </>
         ) : (
-          <h1 className="text-center text-red-900 font-semibold">
-            Must Be Signed In To Create Posts
+          <h1 className="text-center font-semibold">
+            @Anonymous
           </h1>
         )}
         <input
