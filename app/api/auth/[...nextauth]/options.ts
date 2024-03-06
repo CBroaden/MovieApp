@@ -48,6 +48,6 @@ export const options: NextAuthOptions = {
     ],
 
     theme: {
-        colorScheme: "dark", // "auto" | "dark" | "light"
+        colorScheme: "auto", // "auto" | "dark" | "light"
       }
 }
