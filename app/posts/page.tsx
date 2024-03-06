@@ -14,7 +14,7 @@ export default function Posts() {
     redirect("/api/auth/signin?callbackUrl=/posts");
   }
 
-  else return (
+  return (
     <div className="w-full max-w-2xl mx-auto pt-16 ">
       <h1 className="text-4xl text-center font-semibold">Posts</h1>
       <PostForm />
