@@ -10,7 +10,7 @@ export default async function createPost(formData: FormData) {
   const session = await getServerSession(options);
 
   if (!session) {
-    redirect("/api/auth/signin?callbackUrl=/posts");
+    redirect("/api/auth/signin");
   } else {
     await prisma.posts
       .create({
