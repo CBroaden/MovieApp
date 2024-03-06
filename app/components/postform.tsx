@@ -29,6 +29,7 @@ export default async function PostForm() {
           name="movie"
           placeholder="Movie Title..."
           className="my-2 px-1 w-1/2"
+          required
         />
         <br />
         <textarea
@@ -37,6 +38,7 @@ export default async function PostForm() {
           id="content"
           name="content"
           placeholder="What did you think of the movie?"
+          required
         />
         <br />
         <input
