@@ -9,15 +9,19 @@ const prisma = new PrismaClient();
 export default async function createPost(formData: FormData) {
   const session = await getServerSession(options);
 
-  const username = session?.user?.name;
+  
 
-  if (!session) {
-    return redirect("/api/auth/signin");
-  } else {
+  if (session) {
+    var username = session?.user?.name as string;
+  }
+  else {
+    var username = "Anonymous";
+  }
+
     await prisma.posts
       .create({
         data: {
-          author: session?.user?.name || "Anonymous",
+          author: username,
           movie_title: formData.get("movie") as string,
           content: formData.get("content") as string,
           likes: 0,
@@ -34,5 +38,6 @@ export default async function createPost(formData: FormData) {
         await prisma.$disconnect()
         return redirect("/posts");
       });
-  }
+
+
 }
