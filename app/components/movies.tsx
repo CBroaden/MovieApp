@@ -4,7 +4,6 @@ import Image from 'next/image';
 import { Navigation, Scrollbar, A11y, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -28,11 +27,11 @@ export default function Movies() {
 
   return (
       
-      <div className='container text-white mx-auto w-full h-auto relative rounded-2xl bg-main border-y border-black shadow-lg shadow-black px-5'>
-        <h1 className='mb-4 text-2xl underline py-2 text-center font-semibold mx-auto'>
-          New & Upcoming
+      <div className='container mx-auto w-full h-auto relative rounded-2xl px-5'>
+        <h1 className='text-2xl underline text-center mt-4 font-semibold mx-auto'>
+          Trending Movies
           </h1>
-        <Swiper className="mx-auto h-[40vh] w-full relative"
+        <Swiper className="mx-auto backdrop-blur-sm h-64 w-full relative"
           modules={[Navigation, Scrollbar, A11y, Autoplay]}
           spaceBetween={10}
           slidesPerView='auto'
@@ -40,7 +39,7 @@ export default function Movies() {
           navigation
           scrollbar={{ draggable: true }}>
           {movieList.map((movie) => (
-            <SwiperSlide className=' mx-auto !h-[90%] !w-40 relative' key={movie['id']}>
+            <SwiperSlide className=' m-auto !h-52 !w-36 relative' key={movie['id']}>
               <Image
                 fill
                 sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'

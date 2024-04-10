@@ -13,11 +13,22 @@ import PostForm from './components/postform';
 export default async function Home() {
   const session = await getServerSession(options)
   return (
-    <main className="pt-16 flex flex-col min-h-screen items-center justify-between">
+    <main className="pt-6 pb-10 flex flex-col min-h-screen items-center ">
       
-      <PostForm/>
-      <Movies />
-      <h1 className='text-8xl text-center'>ELEMENT</h1>
+      
+      <div className='w-full py-10 popclapboard flex flex-col md:flex-row justify-center border-y border-black items-center'>
+        
+        <h1 className='md:w-2/5 mx-auto text-center text-white'>
+          PLACEHOLDER
+        </h1>
+
+        <PostForm/>
+      </div>
+      <div className='w-full py-10 reel flex flex-col md:flex-row justify-center border-y border-black items-center'>
+        <Movies />
+      </div>
+      
+      
       
     </main>
   );

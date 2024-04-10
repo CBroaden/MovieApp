@@ -29,11 +29,22 @@ textarea, input {
   @apply bg-opacity-70 bg-indigo-700;
 }
 
+.popclapboard {
+  background-image: url('/popclapboard.jpg');
+  background-size: cover;
+  background-position: center;
+  @apply bg-fixed;
+}
+
+.reel {
+  background-image: url('/reel.jpg');
+  background-size: cover;
+  background-position: center;
+  @apply bg-fixed;
+}
+
 body {
-  background-image: url('/clapboard.jpg');
-  background-repeat:no-repeat;
-  background-size:cover;
-  @apply bg-fixed backdrop-blur-[2px];
+  @apply relative pt-10 bg-zinc-200;
 }
 
 .bg-main {

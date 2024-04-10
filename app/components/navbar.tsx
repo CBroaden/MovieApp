@@ -14,8 +14,8 @@ export default async function Navbar() {
     
 
     return(
-        <nav className="flex items-center w-full bg-secondary h-[80px] ">
-        <ul className="flex justify-between max-w-4xl mx-auto items-center text-xl font-semibold text-white w-full">
+        <nav className="flex items-center w-full bg-main fixed top-0 z-10 h-16">
+        <ul className="flex justify-around max-w-4xl mx-auto items-center text-xl font-semibold text-white w-full">
             <li><Link href="/">Home</Link></li>
             <li><Link href="/posts">Posts</Link></li>
         {session ? (

@@ -7,19 +7,16 @@ import Image from "next/image";
 export default async function PostForm() {
   const session = await getServerSession(options);
 
-
-  
-
   return (
-    <div className="bg-secondary mx-auto w-3/4 md:w-1/2 max-w-md my-5 rounded p-4 border-2 border-black shadow-lg shadow-black">
+    <div className="bg-main mx-auto w-3/4 md:w-2/5 max-w-md rounded p-4 border-2 border-black shadow-lg shadow-black">
       <form action={createPost}>
         {session ? (
           <>
             <Image alt="User Profile Image" className="rounded-full border mx-auto border-black" src={session.user?.image!} width={30} height={30} />
-            <h1 className="text-center text-lg font-semibold">@{session.user?.name}</h1>
+            <h1 className="text-center mb-1 text-white text-lg font-semibold">@{session.user?.name}</h1>
           </>
         ) : (
-          <h1 className="text-center font-semibold">
+          <h1 className="text-center text-white font-semibold pb-4 text-lg">
             @Anonymous
           </h1>
         )}
@@ -29,6 +26,7 @@ export default async function PostForm() {
           name="movie"
           placeholder="Movie Title..."
           className="my-2 px-1 w-1/2"
+          autoComplete="off"
           required
         />
         <br />

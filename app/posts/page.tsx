@@ -11,9 +11,16 @@ export default function Posts() {
   const session = getServerSession(options);
 
   return (
-    <div className="w-full max-w-2xl mx-auto pt-16 ">
-      <h1 className="text-4xl text-center font-semibold">Posts</h1>
-      <PostForm />
+    <div className="w-full mx-auto pt-6 ">
+      <div className='w-full py-10 popclapboard flex flex-col md:flex-row justify-center border-y border-black items-center'>
+        
+        <h1 className='md:w-2/5 mx-auto text-center text-white'>
+          PLACEHOLDER
+        </h1>
+
+        <PostForm/>
+      </div>
+      
       <AllPosts />
     </div>
   );
