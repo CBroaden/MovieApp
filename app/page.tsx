@@ -18,7 +18,7 @@ export default async function Home() {
       
       <div className='w-full py-10 popclapboard flex flex-col md:flex-row justify-center border-y border-black items-center'>
         
-        <h1 className='md:w-2/5 mx-auto text-center text-white'>
+        <h1 className='md:w-2/5 mx-auto text-center'>
           PLACEHOLDER
         </h1>
 

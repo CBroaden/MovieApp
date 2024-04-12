@@ -16,7 +16,7 @@ export default function Movies() {
 
   const getMovie = () => {
     fetch(
-      "https://api.themoviedb.org/3/discover/movie?api_key=47409cd77a0ae9552851e6b7d55b9c02"
+      `https://api.themoviedb.org/3/discover/movie?api_key=47409cd77a0ae9552851e6b7d55b9c02`
     )
       .then((res) => res.json())
       .then((json) => setMovieList(json.results));
