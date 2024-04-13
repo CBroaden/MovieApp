@@ -12,13 +12,13 @@ export default async function SearchResults() {
     const movies = data.results;
 
     return (
-        <div className="container mx-auto mt-6 text-white">
+        <div className=" watching mx-auto mt-6 pt-6 text-white">
             
 
             {movies && movies.length > 0 ? (
                 
                 <div>
-                    <h1 className="mt-10 text-center text-3xl">Search Results</h1>
+                    <h1 className=" w-fit underline px-10 py-2 mx-auto text-center bg-main font-bold text-3xl">Search Results</h1>
                     <div className="w-3/4 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                     {movies.map((movie: any) => (
                         <div key={movie.id} className="p-5 my-4 bg-main">
@@ -37,7 +37,7 @@ export default async function SearchResults() {
                                 </div>
                             )}
                             
-                            <h2 className="text-xl mb-1 italic font-bold underline text-center">
+                            <h2 className="text-xl my-2 italic font-bold underline text-center">
                                 {movie.title}
                             </h2>
                             
