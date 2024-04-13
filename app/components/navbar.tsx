@@ -1,10 +1,6 @@
 import Link from "next/link";
 import { getServerSession } from 'next-auth';
 import { options } from "../api/auth/[...nextauth]/options";
-import Image from "next/image";
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
-import searchMovie from "../actions/search/action";
-import SearchResults from "../searchresults/page";
 
 
 export default async function Navbar() {

@@ -1,6 +1,5 @@
 'use client'
 import Image from "next/image";
-import searchMovie from "../actions/search/action";
 import { useSearchParams } from "next/navigation";
 
 
@@ -19,21 +18,40 @@ export default async function SearchResults() {
             {movies && movies.length > 0 ? (
                 
                 <div>
-                    <h1 className="mt-10 text-center text-xl">Search Results</h1>
+                    <h1 className="mt-10 text-center text-3xl">Search Results</h1>
                     <div className="w-3/4 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                     {movies.map((movie: any) => (
-                        <div key={movie.id} className="p-5 my-4 ">
-                            <h2 className="text-xl italic font-bold underline">{movie.title}</h2>
-                            {movie.poster_path && (
-                            <Image src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} width={250} height={250} />
+                        <div key={movie.id} className="p-5 my-4 bg-main">
+                            
+                            {movie.poster_path ? (
+                                <Image 
+                                className="shadow-lg shadow-black mx-auto rounded-3xl"
+                                src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} 
+                                alt={movie.title} 
+                                width={250} 
+                                height={250} 
+                                />
+                            ) : (
+                                <div className="text-center flex justify-center items-center center min-h-[250px] w-full">
+                                    <h1>No Poster Available</h1>
+                                </div>
                             )}
-                            <p>{movie.overview}</p>
+                            
+                            <h2 className="text-xl mb-1 italic font-bold underline text-center">
+                                {movie.title}
+                            </h2>
+                            
+                            <p>
+                                {movie.overview}
+                            </p>
+
                         </div>
                         ))}
                     </div>
                 </div>)
                 : (
-                    <p>No results found</p>
+                    
+                    <h1 className="mt-10 text-center text-xl">No results found</h1>
                 )}
         
 
