@@ -14,13 +14,13 @@ export default async function AllPosts() {
       console.dir(allPosts, { depth: null })
 
     return(
-        <div className="w-full max-w-2xl mx-auto ">
+        <div className="w-full max-w-2xl mb-4 mx-auto ">
             <ul>
                 {allPosts.map((post: any) => (
-                    <li key={post.post_id} className="my-2 [&>*]:p-2 py-2 border-2 border-black bg-main rounded-lg shadow-lg shadow-black">
-                        <h2 className="text-xl text-white text-center underline font-medium">{post.movie_title}</h2>
-                        <p className="text-lg w-full border-y border-black bg-white bg-opacity-75 backdrop-blur-3xl">{post.content}</p>
-                        <h3 className="text-right text-sm text-white">@{post.author}</h3>
+                    <li key={post.post_id} className="bg-neutral-100 [&>*]:p-2 py-2 pl-4 mb-1 shadow shadow-black rounded-xl">
+                        <h2 className="text-xl underline font-bold">{post.movie_title}</h2>
+                        <p className="text-lg font-medium">{post.content}</p>
+                        <h3 className="text-right font-bold text-md text-blue-600 mr-4">@{post.author}</h3>
                     </li>
                 ))}
             </ul>

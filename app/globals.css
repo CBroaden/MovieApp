@@ -2,65 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-
+body {
+  @apply md:flex-row;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+input, textarea {
+  @apply rounded;
 }
 
-.btn, button {
+.elipsis {
+  display: -webkit-box;
+
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+
+
+.btn {
   @apply font-bold bg-white border-black border rounded-sm py-1 px-2 hover:bg-slate-400 active:bg-slate-600;
 }
 
-textarea, input {
-  @apply rounded;
-}
 
 .cgradient {
   @apply bg-opacity-70 bg-indigo-700;
 }
 
-.popclapboard {
-  background-image: url('/popclapboard.jpg');
-  background-size: cover;
-  background-position: center;
-  @apply bg-fixed;
+main {
+  @apply  md:w-1/2 px-1 md:px-2 mx-auto bg-gradient-to-b from-zinc-200 to-zinc-500;
 }
 
-.reel {
-  background-image: url('/reel.jpg');
-  background-size: cover;
-  background-position: center;
-  @apply bg-fixed;
-}
-
-.watching {
-  background-image: url('/watching.jpg');
-  background-size: cover;
-  background-position: center;
-  @apply bg-fixed;
-}
-
-body {
-  @apply relative pt-10;
-}
-
-html {
-  @apply bg-black;
-}
-
-.search {
-  @apply bg-transparent outline-none font-normal pl-1 border-y-0 border-t-0  border-b border-black rounded-none;
-}
 
 .bg-main {
   @apply bg-[#272D2D] bg-opacity-70 backdrop-blur;

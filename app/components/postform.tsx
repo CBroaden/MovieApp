@@ -8,8 +8,8 @@ export default async function PostForm() {
   const session = await getServerSession(options);
 
   return (
-    <div className="bg-main mx-auto w-3/4 md:w-2/5 max-w-md text-white rounded p-4 border-2 border-black shadow-lg shadow-black">
-      <form action={createPost}>
+    <div className="bg-neutral-100 w-full pt-6 mb-2 shadow shadow-black rounded-xl">
+      <form className="px-2 w-full" action={createPost}>
         {session ? (
           <>
             <Image alt="User Profile Image" className="rounded-full border mx-auto border-black" src={session.user?.image!} width={30} height={30} />
@@ -25,26 +25,25 @@ export default async function PostForm() {
           id="movie"
           name="movie"
           placeholder="Movie Title..."
-          className="my-2 search w-1/2"
+          className="my-2 p-1 w-1/2 font-bold border border-r border-black"
           autoComplete="off"
           required
         />
         <br />
         <textarea
-          className="w-full px-1 bg-transparent border p-1 border-black "
+          className="w-full border p-1 border-black font-semibold"
           rows={6}
           id="content"
           name="content"
-          placeholder="What did you think of the movie?"
+          placeholder="What do you think of the movie?"
           required
         />
-        <br />
         <input
           type="submit"
           id="post"
           name="post"
           value="Create Post"
-          className="btn flex mx-auto text-black"
+          className="btn flex ml-auto mb-2 text-black"
         />
       </form>
     </div>
