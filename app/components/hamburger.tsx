@@ -4,7 +4,7 @@ import toggleSidebar from "../functions/toggleSidebar";
 
 export default function Hamburger() {
     return (
-        <button onClick={toggleSidebar} className="text-3xl md:hidden fixed left-0 top-0 w-fit ml-4 mt-4 z-30">
+        <button onClick={toggleSidebar} className="text-3xl md:hidden fixed right-4 top-4 w-fit z-30">
             <GiHamburgerMenu />
         </button>
     );

@@ -1,4 +1,4 @@
-
+"use server";
 import { PrismaClient } from "@prisma/client"
 
 const prisma = new PrismaClient()
@@ -17,7 +17,7 @@ export default async function AllPosts() {
         <div className="w-full max-w-2xl mb-4 mx-auto ">
             <ul>
                 {allPosts.map((post: any) => (
-                    <li key={post.post_id} className="bg-neutral-100 [&>*]:p-2 py-2 pl-4 mb-1 shadow shadow-black rounded-xl">
+                    <li key={post.post_id} className="bg-white [&>*]:p-2 py-2 pl-4 mb-1 shadow shadow-black rounded-xl">
                         <h2 className="text-xl underline font-bold">{post.movie_title}</h2>
                         <p className="text-lg font-medium">{post.content}</p>
                         <h3 className="text-right font-bold text-md text-blue-600 mr-4">@{post.author}</h3>

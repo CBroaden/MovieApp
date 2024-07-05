@@ -18,7 +18,7 @@ export default async function Navbar() {
     
 
     return(
-        <nav  id="sidebar" className="h-full md:w-[25%] hidden w-full bg-neutral-200 text-center md:text-left z-20 px-4 text-xl font-bold md:flex flex-col fixed p-2 border-r border-black">
+        <nav  id="sidebar" className="h-full md:w-[25%] hidden w-full bg-white text-center md:text-left z-20 px-4 text-xl font-bold md:flex flex-col fixed p-2 border-r border-black">
   
           <div className="h-1/4 flex flex-col justify-between p-2 mt-2 ml-4">
             <h1 className=" "><Link href="/" className="hover:underline"><FaHome className="inline text-xl mb-1"/> TheMovieX</Link></h1>

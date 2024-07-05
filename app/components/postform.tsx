@@ -8,8 +8,8 @@ export default async function PostForm() {
   const session = await getServerSession(options);
 
   return (
-    <div className="bg-neutral-100 w-full pt-6 mb-2 shadow shadow-black rounded-xl">
-      <form className="px-2 w-full" action={createPost}>
+    <div className="bg-white w-full pt-6 mb-2 shadow shadow-black rounded-xl">
+      <form className="px-6 pb-2 w-full" action={createPost}>
         {session ? (
           <>
             <Image alt="User Profile Image" className="rounded-full border mx-auto border-black" src={session.user?.image!} width={30} height={30} />
@@ -25,7 +25,7 @@ export default async function PostForm() {
           id="movie"
           name="movie"
           placeholder="Movie Title..."
-          className="my-2 p-1 w-1/2 font-bold border border-r border-black"
+          className="my-2 p-1 w-1/2 font-bold border border-black"
           autoComplete="off"
           required
         />
