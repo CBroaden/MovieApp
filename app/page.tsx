@@ -24,22 +24,22 @@ export default async function Home() {
         <ul className='flex flex-wrap justify-around gap-8 font-bold'>
 
           <li className='flex flex-col items-center'>
-            <SiThemoviedatabase className='mx-auto text-blue-900 inline text-3xl mb-1'/>
+            <SiThemoviedatabase className='mx-auto text-blue-500 inline text-3xl mb-1'/>
             <h1 className=''>TheMovieDB</h1>
           </li>
 
           <li className='flex flex-col items-center'>
-            <TbBrandNextjs className='mx-auto inline text-3xl mb-1 text-blue-900'/>
+            <TbBrandNextjs className='mx-auto inline text-3xl mb-1 text-blue-500'/>
             <h1 className=''>NextJS</h1>
           </li>
 
           <li className='flex flex-col items-center'>
-            <BiLogoPostgresql className='mx-auto text-blue-900 inline text-3xl mb-1'/>
+            <BiLogoPostgresql className='mx-auto text-blue-500 inline text-3xl mb-1'/>
             <h1 className=''>PostgreSQL</h1>
           </li>
 
           <li className='flex flex-col items-center'>
-            <FaUserCheck className='mx-auto inline text-3xl mb-1 text-blue-900'/>
+            <FaUserCheck className='mx-auto inline text-3xl mb-1 text-blue-500'/>
             <h1 className=''>OAuth | NextAuth</h1>
           </li>
 
