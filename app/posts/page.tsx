@@ -9,7 +9,7 @@ export default function Posts() {
 
   return (
     <main className="pt-6 flex flex-col min-h-screen items-center ">
-      <h1 className='text-2xl ml-0 w-full text-left font-bold mb-4'>Posts</h1>
+      <h1 className='page-title'>Posts</h1>
       <PostForm/>
       <AllPosts />
       

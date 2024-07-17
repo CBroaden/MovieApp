@@ -3,6 +3,7 @@ import { getServerSession } from "next-auth";
 import { options } from "./api/auth/[...nextauth]/options";
 import { PrismaClient } from "@prisma/client";
 import { redirect } from "next/navigation";
+import { revalidatePath } from "next/cache";
 
 const prisma = new PrismaClient();
 
@@ -31,7 +32,7 @@ export default async function createPost(formData: FormData) {
 
       .then(async() => {
         await prisma.$disconnect()
-        return redirect("/posts");
+        return revalidatePath("/posts");
       })
       .catch(async(error: Error) => {
         console.log(error);
@@ -41,3 +42,4 @@ export default async function createPost(formData: FormData) {
 
 
 }
+

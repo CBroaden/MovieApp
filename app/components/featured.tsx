@@ -29,9 +29,9 @@ export default function Featured() {
               src={`https://image.tmdb.org/t/p/w500${movie["poster_path"]}`}
               alt={movie["title"]}
             />
-            <div className="flex flex-col w-[70%]">
+            <div className="flex flex-col w-[75%]">
                 <h2 className="text-lg overflow-hidden block whitespace-nowrap text-ellipsis w-[90%]">{movie["title"]}</h2>
-                <p className="text-xs elipsis w-[90%]">{movie["overview"]}</p>
+                <p className="text-xs elipsis w-full">{movie["overview"]}</p>
             </div>
           </div>
         ))}

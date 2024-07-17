@@ -8,13 +8,13 @@ export default async function PostForm() {
   const session = await getServerSession(options);
 
   return (
-    <div className="bg-white w-full pt-6 mb-2 shadow shadow-black rounded-xl">
+    <div className="bg-2 w-full pt-6 mb-2 shadow shadow-black rounded-xl">
       <form className="px-6 pb-2 w-full" action={createPost}>
         {session ? (
-          <>
-            <Image alt="User Profile Image" className="rounded-full border mx-auto border-black" src={session.user?.image!} width={30} height={30} />
-            <h1 className="text-center mb-1 text-lg font-semibold">@{session.user?.name}</h1>
-          </>
+          <div className="flex items-center">
+            <Image alt="User Profile Image" className="rounded border border-black" src={session.user?.image!} width={40} height={40} />
+            <h1 className="h-full text-xl font-semibold ml-1">{session.user?.name}</h1>
+          </div>
         ) : (
           <h1 className="text-center font-semibold pb-4 text-lg">
             @Anonymous
@@ -32,7 +32,7 @@ export default async function PostForm() {
         <br />
         <textarea
           className="w-full border p-1 border-black font-semibold"
-          rows={6}
+          rows={3}
           id="content"
           name="content"
           placeholder="What do you think of the movie?"

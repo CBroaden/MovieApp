@@ -24,15 +24,15 @@ export default async function SearchResults( {
     console.log(data.results);
 
     return (
-        <main className=" pt-6">
+        <main className=" pt-6 flex flex-col min-h-screen items-center">
             
             {movies && movies.length > 0 ? (
                 
                 <div>
-                    <h1 className=" w-fit underline px-10 py-2 mx-auto text-center font-bold text-3xl">Search Results</h1>
+                    <h1 className="page-title">Search Results</h1>
                     <div className=" mx-auto grid grid-cols-1 md:grid-cols-2">
                     {movies.map((movie: any) => (
-                        <div key={movie.id} className="p-5 my-4">
+                        <div key={movie.id} className="p-5 my-4 bg-2">
                             
                             {movie.poster_path ? (
                                 <Image 
