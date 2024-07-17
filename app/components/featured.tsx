@@ -31,7 +31,7 @@ export default function Featured() {
             />
             <div className="flex flex-col w-[75%]">
                 <h2 className="text-lg overflow-hidden block whitespace-nowrap text-ellipsis w-[90%]">{movie["title"]}</h2>
-                <p className="text-xs elipsis w-full">{movie["overview"]}</p>
+                <p className="text-xs font-normal elipsis w-full">{movie["overview"]}</p>
             </div>
           </div>
         ))}
