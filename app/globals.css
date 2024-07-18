@@ -40,7 +40,7 @@ main {
 }
 
 .bg-2 {
-  @apply bg-black bg-opacity-80 text-white;
+  @apply bg-black bg-opacity-80 text-white backdrop-blur-[2px];
 }
 
 
