@@ -22,8 +22,11 @@ export default async function Page({ params }: { params: { movie: string } }) {
             <h2 className="text-md ">{movie.status}: {movie.release_date}</h2>
           </section>
           <div className="flex w-full flex-col lg:flex-row gap-4 items-start pb-6">
-            
-            <Image className="rounded-3xl shadow mx-auto shadow-black" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} width={250} height={250} alt={movie.title} />
+            {movie.poster_path ? (
+              <Image className="rounded-3xl shadow mx-auto shadow-black" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} width={250} height={250} alt={movie.title} />
+            ) : (
+              <div className="mx-auto text-4xl text-center"><h1>No Poster Available</h1></div>
+            )}
             
             <div className="flex flex-col w-full h-full">
               
