@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import ContentBar from "../components/contentbar";
 
@@ -48,9 +49,9 @@ export default async function SearchResults( {
                                 </div>
                             )}
                             
-                            <h2 className="text-xl my-2 italic font-bold underline text-center">
-                                {movie.title}
-                            </h2>
+                            <Link href={`/moviedetails/${movie.id}`} className="hover:text-blue-600">
+                                <h1 className="text-xl my-2 italic font-bold underline text-center">{movie.title}</h1>
+                            </Link>
                             
                             <p className="">
                                 {movie.overview}

@@ -14,6 +14,7 @@ export default async function Home() {
   return (
     <main className="pt-6 flex flex-col min-h-screen items-center ">
       <h1 className='page-title '>Home</h1>
+      <p className='bg-2 text-xl text-center mb-4 rounded-3xl px-4 py-2 shadow shadow-black font-medium'>Sign In, Create and View Posts, and Search Movies!</p>
       <PostForm/>
       <div className='[&>*]:mx-auto [&>*]:w-2/3 w-full bg-2 py-2 mb-2 px-4 shadow shadow-black rounded-xl'>
         <h1 className='text-xl font-bold text-center mb-4'>Find Movie</h1>

@@ -40,7 +40,7 @@ export default async function AllPosts() {
                     <p className="text-lg mx-auto font-medium">{post.content}</p>
                     
                         
-                        <h3 className=" font-semibold text-blue-600 text-right">
+                        <h3 className=" font-semibold text-blue-600 text-right mr-4">
                             @{post.author}
                         </h3>
 

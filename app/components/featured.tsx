@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Featured() {
   const [movieList, setMovieList] = useState([]);
@@ -21,7 +22,7 @@ export default function Featured() {
         Featured
       </h1>
         {movieList.map((movie) => (
-          <div className="m-auto border-b mb-2 border-black flex h-24 relative w-full" key={movie["id"]}>
+          <Link href={`/moviedetails/${movie["id"]}`} className="m-auto hover:bg-neutral-700 border-b mb-2 border-black flex h-24 relative w-full" key={movie["id"]}>
             <Image
               height={100}
               width={60}
@@ -33,7 +34,7 @@ export default function Featured() {
                 <h2 className="text-lg overflow-hidden block whitespace-nowrap text-ellipsis w-[90%]">{movie["title"]}</h2>
                 <p className="text-xs font-normal elipsis w-full">{movie["overview"]}</p>
             </div>
-          </div>
+          </Link>
         ))}
     </div>
   );
