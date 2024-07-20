@@ -13,8 +13,7 @@ export default async function Page({ params }: { params: { movie: string } }) {
   
   const results = await fetch(`https://api.themoviedb.org/3/movie/${params.movie}?api_key=${apiKey}`, options);
   const movie = await results.json()
-  console.log(params)
-  console.log(movie)
+  
     return (
       <main className="pt-6  flex flex-col items-center">
         <div className="bg-2 mb-2 w-full p-4 rounded-3xl flex flex-col">
