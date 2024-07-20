@@ -16,6 +16,7 @@ export default async function Page({ params }: { params: { movie: string } }) {
   
     return (
       <main className="pt-6  flex flex-col items-center">
+        <h1 className="page-title">Movie Details</h1>
         <div className="bg-2 mb-2 w-full p-4 rounded-3xl flex flex-col">
           <section className="flex flex-col ml-2 mb-4">
             <h1 className="text-2xl font-semibold">{movie.title}</h1>
